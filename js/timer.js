@@ -1,13 +1,20 @@
-function startTimer() {
-  let totalSeconds = 25 * 60;
+let totalSeconds = 25 * 60;
+let pomodoroTimer = null;
 
-  let start25MinuteCountdown = setInterval(function () {
+function startTimer() {
+  if (pomodoroTimer) clearInterval(pomodoroTimer);
+
+  pomodoroTimer = setInterval(function () {
     if (totalSeconds < 0) {
-      clearInterval(start25MinuteCountdown);
+      clearInterval(pomodoroTimer);
       console.log("Take a break!");
     } else {
       console.log(totalSeconds);
     }
     totalSeconds -= 1;
   }, 1000);
+}
+
+function pauseTimer() {
+  clearInterval(pomodoroTimer);
 }
