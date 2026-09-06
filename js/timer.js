@@ -7,7 +7,7 @@ function startTimer() {
   pomodoroTimer = setInterval(function () {
     if (totalSeconds < 0) {
       clearInterval(pomodoroTimer);
-      console.log("Take a break!");
+      //   console.log("Take a break!");
     } else {
       console.log(totalSeconds);
     }
@@ -17,4 +17,5 @@ function startTimer() {
 
 function pauseTimer() {
   clearInterval(pomodoroTimer);
+  pomodoroTimer = null;
 }
