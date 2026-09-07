@@ -19,3 +19,13 @@ function pauseTimer() {
   clearInterval(pomodoroTimer);
   pomodoroTimer = null;
 }
+
+// format totalSeconds into MM:SS -->
+
+function formatTime(totalSeconds) {
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+  const paddedMiniutes = String(minutes).padStart(2, "0");
+  const paddedSeconds = String(seconds).padStart(2, "0");
+  return `${paddedMinutes}:${paddedSeconds}`;
+}
