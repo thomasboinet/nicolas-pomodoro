@@ -1,4 +1,5 @@
 const startStopBtn = document.getElementById("start-pause-btn");
+const pomodoroTimeDisplay = document.getElementById("pomodoro-display");
 
 startStopBtn.addEventListener("click", function toggleTimer() {
   if (pomodoroTimer !== null) {

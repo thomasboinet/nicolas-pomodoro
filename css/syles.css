@@ -16,3 +16,7 @@ body {
   justify-content: center;
   gap: 5px;
 }
+
+#pomodoro-display {
+  color: white;
+}
