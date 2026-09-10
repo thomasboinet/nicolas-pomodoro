@@ -40,3 +40,9 @@ function switchMode() {
     console.log(totalSeconds);
   }
 }
+
+function resetTimer() {
+  pauseTimer();
+  totalSeconds = 25 * 60;
+  pomodoroTimeDisplay.textContent = formatTime(totalSeconds);
+}
