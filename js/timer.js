@@ -1,4 +1,5 @@
 let totalSeconds = 25 * 60;
+let isBreak;
 let pomodoroTimer = null;
 
 // format totalSeconds into MM:SS -->
@@ -16,11 +17,10 @@ function startTimer() {
 
   pomodoroTimer = setInterval(function () {
     if (totalSeconds < 0) {
-      clearInterval(pomodoroTimer);
-    } else {
-      console.log(totalSeconds);
-      pomodoroTimeDisplay.textContent = formatTime(totalSeconds);
+      switchMode();
     }
+    pomodoroTimeDisplay.textContent = formatTime(totalSeconds);
+    console.log(totalSeconds);
     totalSeconds -= 1;
   }, 1000);
 }
@@ -28,4 +28,15 @@ function startTimer() {
 function pauseTimer() {
   clearInterval(pomodoroTimer);
   pomodoroTimer = null;
+}
+
+function switchMode() {
+  if (isBreak) {
+    totalSeconds = 25 * 60;
+    isBreak = false;
+  } else {
+    totalSeconds = 5 * 60;
+    isBreak = true;
+    console.log(totalSeconds);
+  }
 }
