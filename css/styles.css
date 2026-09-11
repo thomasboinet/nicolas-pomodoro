@@ -24,7 +24,7 @@ body {
 
 .pomodoro-controls {
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 
 .pomodoro-controls button {
@@ -32,6 +32,20 @@ body {
   border: none;
   color: antiquewhite;
   font-size: 25px;
+}
+
+#start-pause-btn:hover {
+  filter: brightness(80%);
+  transition: 0.2s ease-in-out;
+}
+
+#reset-btn {
+  transform: rotate(90deg);
+}
+
+#reset-btn:hover {
+  filter: brightness(80%);
+  transition: 0.2s ease-in-out;
 }
 
 .theme-container {
