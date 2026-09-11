@@ -21,3 +21,24 @@ body {
   display: flex;
   gap: 5px;
 }
+
+.theme-container {
+  margin-top: 50px;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.theme-container img {
+  width: 8%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.684);
+  transition: all ease-in-out 0.3s;
+}
+
+.theme-container img:hover {
+  width: 10%;
+}
