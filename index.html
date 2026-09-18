@@ -7,27 +7,44 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="pomodoro-container">
-      <div><span id="pomodoro-display">25:00</span></div>
-      <div class="pomodoro-controls">
-        <div><button id="start-pause-btn">Start</button></div>
-        <div><button id="reset-btn">↻</button></div>
-      </div>
-      <div class="theme-container">
-        <img src="assets/images/zelda-botw.jpg" alt="zelda-botw" />
-        <img
-          src="assets/images/xenoblade.jpeg.webp"
-          alt="xenoblade-chronicles"
-        />
-        <img src="assets/images/fire-emblem-awakening.jpg" alt="fire-emblem" />
-        <img src="assets/images/hollow-knight.jpg" alt="hollow-knight" />
-        <img
-          src="assets/images/genshin-impact-hqdph.jpg"
-          alt="genshin-impact"
-        />
+    <div id="background-layer">
+      <div class="pomodoro-container">
+        <div><span id="pomodoro-display">25:00</span></div>
+        <div class="pomodoro-controls">
+          <div><button id="start-pause-btn">Start</button></div>
+          <div><button id="reset-btn">↻</button></div>
+        </div>
+        <div class="theme-container">
+          <img
+            src="assets/images/zelda-botw.jpg"
+            alt="zelda-botw"
+            data-theme="zelda-botw"
+          />
+          <img
+            src="assets/images/xenoblade.jpeg.webp"
+            alt="xenoblade-chronicles"
+            data-theme="xenoblade-chronicles"
+          />
+          <img
+            src="assets/images/fire-emblem-awakening.jpg"
+            alt="fire-emblem"
+            data-theme="fire-emblem"
+          />
+          <img
+            src="assets/images/hollow-knight.jpg"
+            alt="hollow-knight"
+            data-theme="hollow-knight"
+          />
+          <img
+            src="assets/images/genshin-impact-hqdph.jpg"
+            alt="genshin-impact"
+            data-theme="genshin-impact"
+          />
+        </div>
       </div>
     </div>
     <script src="js/timer.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/themes.js"></script>
   </body>
 </html>

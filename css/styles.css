@@ -8,6 +8,14 @@ body {
   background-color: #788365;
 }
 
+#background-layer {
+  position: fixed;
+  /* z-index: -1; */
+  transition: background-image 0.5s ease;
+  background-size: cover;
+  background-position: center;
+}
+
 .pomodoro-container {
   min-height: 100vh;
   display: flex;
